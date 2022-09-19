@@ -5,7 +5,7 @@ while True:
     first_num = int(input("Введите начало числового диапазон: "))
     second_num = int(input("Введите конец числового диапазона: "))
     if second_num < 2 or first_num < 1 or second_num < first_num:
-        print("Ошибка ввода данных, давай заново")
+        print("Ошибка ввода данных, давайте заново")
         continue
     else:
         break

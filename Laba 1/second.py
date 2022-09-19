@@ -2,6 +2,7 @@ import re
 
 string = str(input("Введите текст: "))
 result_list = re.split(r'\W+', string)
+string_copy = re.sub(r'\d+', r'', string)
 for i in range(len(result_list)):
     if result_list[i] == '':
         result_list.remove('')
@@ -9,8 +10,8 @@ for i in range(len(result_list)):
 print("Количество введённых слов = ", len(result_list))
 
 glas_list = ['а', 'о', 'у', 'и', 'ы', 'ё', 'я', 'ю', 'э', 'е']
-string_copy = re.sub(r'\d+', r'', string)
-result_list = re.split(r'\W+', string_copy)
+
+#result_list = re.split(r'\W+', string_copy)
 count_of_glas = int(0)
 count_of_coglas = int(0)
 
@@ -22,6 +23,6 @@ for index in range(len(result_list)):
         else:
             count_of_coglas +=1
 
-
+print(result_list)
 print("Количество согласных букв = ", count_of_coglas)
 print("Количество гласных букв = ", count_of_glas)
