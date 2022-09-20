@@ -1,8 +1,8 @@
 import re
 
 string = str(input("Введите текст: "))
-result_list = re.split(r'\W+', string)
 string_copy = re.sub(r'\d+', r'', string)
+result_list = re.split(r'\W+', string_copy)
 for i in range(len(result_list)):
     if result_list[i] == '':
         result_list.remove('')
@@ -21,7 +21,7 @@ for index in range(len(result_list)):
         if word[index_of_letter].lower() in glas_list:
             count_of_glas += 1
         else:
-            count_of_coglas +=1
+            count_of_coglas += 1
 
 print(result_list)
 print("Количество согласных букв = ", count_of_coglas)

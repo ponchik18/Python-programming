@@ -18,10 +18,3 @@ while flag:
     except ValueError as exp:
         print(exp)
 print("Факториал %d = %d " % (number, factorial(number)))
-
-
-
-
-
-
-
