@@ -45,8 +45,9 @@ file = "info_about_firm4.txt"
 try:
     list_of_flowers = read_all_line(file)
     list_of_dictionary = create_dictionary(list_of_flowers)
-    for key in list_of_dictionary:
-        print(key)
+    for item_of_dict in list_of_dictionary:
+        for key in item_of_dict:
+            print("%s : %.2f" % (key, item_of_dict.get(key)))
     with open("firm.json", "w") as write_f:
         json.dump(list_of_dictionary, write_f)
     with open("firm.json", "r") as read_f:

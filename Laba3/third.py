@@ -28,7 +28,7 @@ def create_dictionary(list_of_item):
         hour_subject_count = int(0)
         for item in string_hour.split(" "):
             hour_subject_count += int(re.sub(r"\D+", r"", item))
-        flowers_dict.update({subject:hour_subject_count})
+        flowers_dict.update({subject: hour_subject_count})
     return flowers_dict
 
 
